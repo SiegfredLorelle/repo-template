@@ -118,6 +118,11 @@ Work through this once, then delete this file.
   CodeRabbit app if you also want that pass; `.coderabbit.yaml` is inert until
   you do.
 
+  The review posts a tracking comment on the pull request (updated as it
+  works) plus inline comments on specific lines. Each labeled run reviews
+  the full diff and costs real API usage (roughly $1–3), so apply the label
+  deliberately — re-adding it after a push triggers a fresh full run.
+
 - [ ] **11. Optional extras**
 
   Deliberately not shipped, because most repos never need them:
