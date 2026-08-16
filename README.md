@@ -41,6 +41,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Commit messages follow a
 [strict convention](.github/COMMIT_CONVENTION.md) enforced by a git hook and
 by CI.
 
+Working with an AI coding agent? Conventions live in [AGENTS.md](AGENTS.md),
+which every agent tool reads.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
