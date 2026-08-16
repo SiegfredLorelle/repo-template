@@ -37,7 +37,9 @@ budget before you have written anything — `refactor(notifications): ` is 25
 characters on its own, which is why scopes are capped at 12.
 
 Long URLs cannot be wrapped, so the footer has no length limit. Put
-`Closes: <url>` and `Co-Authored-By:` trailers there, never in the body.
+`Closes: <url>` and human `Co-Authored-By:` trailers there, never in the body.
+Do not add AI or tool attribution, including `Co-Authored-By:` entries for AI
+assistants and `Claude-Session` trailers.
 
 ## Types
 

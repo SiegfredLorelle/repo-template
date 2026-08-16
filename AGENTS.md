@@ -37,9 +37,11 @@ rejected, so get them right the first time:
 - Subject: lowercase first word, imperative mood, no trailing period
 - **Blank line between header and body** — required
 - Body wrapped at **72 characters**
-- Long URLs and `Co-Authored-By:` trailers go in the footer, which has no
-  length limit. Never put a long URL in the body; it cannot be wrapped and
+- Long URLs and human `Co-Authored-By:` trailers go in the footer, which has
+  no length limit. Never put a long URL in the body; it cannot be wrapped and
   will fail the check.
+- Never add AI or tool attribution to commits or pull requests. This includes
+  `Co-Authored-By:` entries for AI assistants and `Claude-Session` trailers.
 
 Full guide with examples: `.github/COMMIT_CONVENTION.md`
 
