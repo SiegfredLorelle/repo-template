@@ -28,7 +28,10 @@ jobs:
     #
     # This cannot be expressed in .commitlintrc.yaml: commitlint's `ignores`
     # option takes JavaScript functions, and a YAML config cannot hold one.
-    if: github.actor != 'dependabot[bot]'
+    # TEMPORARY — this branch exists only to test how branch protection
+    # treats a REQUIRED check whose job is skipped. Always false, so the job
+    # is always skipped. Revert before merging; this branch is throwaway.
+    if: github.actor == 'nobody-will-ever-match-this'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
