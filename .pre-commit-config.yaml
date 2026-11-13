@@ -34,6 +34,17 @@ repos:
     hooks:
       - id: gitleaks
 
+  # Strips AI attribution before commitlint sees the message, so an agent that ignores
+  # .claude/settings.json still can't land it. Human Co-Authored-By trailers are kept.
+  # perl rather than sed -i, which differs between GNU and BSD/macOS.
+  - repo: local
+    hooks:
+      - id: strip-ai-attribution
+        name: strip AI attribution
+        entry: perl -i -ne 'print unless /^Co-Authored-By:.*(claude|anthropic\.com)/i || /^Claude-Session:/i || /Generated with \[?Claude Code/'
+        language: system
+        stages: [commit-msg]
+
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v9.26.0
     hooks:
